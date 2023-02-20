@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'roboto';
+    text-align: center;
+    font-family: 'Roboto';  
+    height: 70vh;
+}
+input[type="text"], input[type="password"] {
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    margin: 20px auto;
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+    background: rgb(217, 235, 255);
+    border: solid  1px;
+    border-color: rgb(171, 210, 255);
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background: rgb(217, 235, 255);
+    border: solid  1px;
+    border-color: rgb(171, 210, 255);
+}
+.boton .bt1{
+    padding: 10px;
+    color: white;
+    background: #55bde0;
+    width: 320px;
+    margin: 20px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.boton :hover{
+ 
+    background: #0287b4;
+}
+.contenedorPadre{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contenedorHijo a{
+    display: block;
+    border: solid 10px;
+    border:solid 1px black;
+    color: black;
+    
+}
+.login a{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background:#55bde0;
+    width: 320px;
+    margin: 20px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration:none;
+   font-weight: 100;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.login a:hover{
+    background: #0287b4;
+}
+header{
+    border-bottom:1px solid black ;
+    padding: 40px;
+   
+}
+header a{
+   color: rgb(0, 0, 0);
+   text-decoration-line:none;
+}
+.or{
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    width: 320px;
+    margin: 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.or:hover{
+    color: #55bde0;
+}
+.ya{
+    font-family: Arial, Helvetica, sans-serif;
+}
