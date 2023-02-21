@@ -4,14 +4,15 @@ require 'database.php';
 $message = '';
 
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    $sql = "INSERT INTO usuarios (email, password) VALUES (:email, :password)";
+    $sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':email', $_POST['email']);
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
     $stmt->bindParam(':password', $password);
   
     if ($stmt->execute()) {
-        $message = 'CREACION EXITOSA';
+        $message = 'SU CUENTA FUE CREADA CORRECTAMENTE';
+        
     } else{
         
         $message = 'CREACION FALLIDA';
@@ -25,7 +26,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylePHP.css">
     <title>Document</title>
 </head>
 <body>
@@ -34,7 +35,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
 <?php if (!empty($message)):?> 
     
-    <p><? $message ?></p>
+    <p><?= $message ?></p>
     <?php endif; ?>
 
 
@@ -59,7 +60,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
 
 <span class="ya"> ¿ya estas registrado? </span>
-<a class="or" href="signup.php"> Inicia sesión </a>
+<a class="or" href="login.php"> Inicia sesión </a>
 
 </body>
 </html>
